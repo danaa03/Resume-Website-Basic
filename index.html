@@ -1,103 +1,47 @@
 <!DOCTYPE html>
 
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" >
+<html>
 
-<head runat="server">
-<meta charset="utf-8" />
+<head>
+<meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>  
-    <link rel="stylesheet" href="Content/all.css" />
-    <link rel="icon" href="C:/Users/danaa/Downloads/user (1).png">
-
-    <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: white;
-      background-repeat:no-repeat;
-      background-position:top;
-      background-size:cover;
-      /*background:linear-gradient(to top right, purple, rgba(24,62,250,1),cornflowerblue,turquoise);*/
-      background-image: url('C:/Users/danaa/Desktop/enlarge_bb_.jpg');
-     /* background:radial-gradient(circle at center, cornflowerblue 0, turquoise,rgba(24,62,250,1), cornflowerblue 100%);*/
-      font-family: 'Times New Roman', Times, serif;
-      color: black;
-    }
-    a{
-        text-decoration:none;
-    }
-    
-    #main {
-      width: 60%;
-      animation: fadeinout 1s ease-in-out;
-      margin: 50px auto;
-      height:1000px;
-      position:absolute;
-      top:15%;
-      left:18%;
-      padding: 40px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      border-radius: 100px 0px 100px 0px;
-      background-color: ghostwhite;
-      text-align:center;
-    }
-    @keyframes fadeinout{
-        0% {
-            opacity:1;
-        }
-        50% {
-            opacity:0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-    header{
-        height:50px;
-        background-color: rgb(0, 0, 0);
-        font-family: 'Franklin Gothic';
-    }
-   .button {
-        display: inline-block;
-        padding: 5px 10px;
-        position:absolute;
-        top: 12px;
-        right:10px;
-        text-decoration:none;
-        border: none;
-        font-family: 'Franklin Gothic';
-        font-size:smaller;
-        color:white;
-        border-radius:10px;
-        background-color:rgb(99, 81, 81);
-        cursor:pointer;
-   }
-   .button:hover{
-        background-color:rgb(155, 124, 124);
-   }
-  </style>
+    <link rel="stylesheet" href="istyle.css" />
+    <link rel="icon" href="C:/Users/danaa/Downloads/user (1).png"> <!--add your own path here-->
 </head>
 <body>
         <header>
             <!--<img src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg?w=740" alt="Image error" style="width:50px">-->
-            <div style="font-size:20px;color:white;position:absolute;left:40px;top:13px">  &nbsp RESUME - Danaa Younus </div> 
+            <div style="font-size:20px;color:white;position:absolute;left:40px;top:13px">  &nbsp RESUME - FName LName </div> 
             <a href="Contact.html" class="button"> Contact me</a>
-            
         </header>
 
   <div id="main">
     <div>
-        
         <img src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg?w=740" alt="Image error" style="width:50px"> 
     </div>
     <h2>Personal Details</h2>
-    <p> <b> &nbsp Name:</b>  Danaa Younus</p>
-    <p> <b> &nbsp Phone number:</b> 29399292992 </p>
-    <p> <b> &nbsp Address:</b> 22323 ieeiwei 2 3 </p>
-    <p> <b> &nbsp Email:</b> abc@xxx.com</p>
-    <br/> <br/> <br/> <i>Skilled, hardworking individual with a strong sense of teamwork. Recent Graduate, eager to learn.
-        Experienced in the field through multiple university projects and personal endeavours.</i> 
+    <script>
+        // extract query parameters from the URL
+        const params = new URLSearchParams(document.location.search);
+        const name = params.get("name");
+        const phone = params.get("phone");
+        const email= params.get("email");
+        const address = params.get("address");
+        const message = params.get("message");
+        
+        //display and check on console
+        console.log("name: "+name);
+        console.log("phone: "+phone);
+        console.log("name: "+email);
+        console.log("phone: "+address);
+        console.log("message: "+message);
+
+    </script>
+    
+    <br/> <br/> <i><p style="font-family:Georgia, 'Times New Roman', Times, serif">"Skilled, hardworking individual with a strong sense of teamwork. Recent Graduate, eager to learn.
+        Experienced in the </p></i> </p><p style="font-family:Georgia, 'Times New Roman', Times, serif"><i>field through multiple university projects and personal endeavours."</i> </p>
 
     <br/> <br/> <br/><h2>Academics</h2> <p><b>University:</b>  FAST NUCES LHR </p> <p><b>CGPA:</b> 3.22 </p> <p><b>Alevels:</b>  XAs XB </p> <p><b>OLevels:</b> XAs XBs </p> <b>Languages:</b> C++, C, C#<br/> <br/> <br/> <h2>Projects</h2>
      <p ><b>OOP Project:</b>  Traffic Lights System (Visual Studio C++) </a></p>
@@ -107,10 +51,9 @@
     
     <br/><br/><h2>Extracurriculars</h2> xxx <br/> ccc <br/> xxx<br/>
   </div>
- <div style="height:1230px;width:100%">
-     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+ <div style="height:1230px; width:100%">
+
   </div>
 </body>
 
 </html>
-
