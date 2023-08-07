@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    background-repeat:no-repeat;
+    background-position:top;
+    background-size:cover;
+    /*background:linear-gradient(to top right, purple, rgba(24,62,250,1),cornflowerblue,turquoise);*/
+    background-image: url('C:/Users/danaa/Desktop/enlarge_bb_.jpg');
+   /* background:radial-gradient(circle at center, cornflowerblue 0, turquoise,rgba(24,62,250,1), cornflowerblue 100%);*/
+    font-family:Arial, Helvetica, sans-serif;
+    color: black;
+  }
+  a{
+      text-decoration:none;
+  }
+  
+  #main {
+    width: 60%;
+    animation: fadeinout 0s ease-in-out;
+    margin: 50px auto;
+    height:1000px;
+    position:absolute;
+    top:15%;
+    left:18%;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 100px 0px 100px 0px;
+    background-color: ghostwhite;
+    text-align:center;
+  }
+  @keyframes fadeinout{
+      0% {
+          opacity:1;
+      }
+      50% {
+          opacity:0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+  header{
+      height:50px;
+      background-color: rgb(0, 0, 0);
+      font-family: 'Franklin Gothic';
+  }
+ .button {
+      display: inline-block;
+      padding: 5px 10px;
+      position:absolute;
+      top: 12px;
+      right:10px;
+      text-decoration:none;
+      border: none;
+      font-family: 'Franklin Gothic';
+      font-size:smaller;
+      color:white;
+      border-radius:10px;
+      background-color:rgb(99, 81, 81);
+      cursor:pointer;
+ }
+ .button:hover{
+      background-color:rgb(155, 124, 124);
+ }
