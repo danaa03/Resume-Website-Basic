@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html>
 
 <head>
@@ -13,8 +12,8 @@
 <body>
         <header>
             <!--<img src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg?w=740" alt="Image error" style="width:50px">-->
-            <div style="font-size:20px;color:white;position:absolute;left:40px;top:13px">  &nbsp RESUME - FName LName </div> 
-            <a href="Contact.html" class="button"> Contact me</a>
+            <div style="font-size:20px;color:white;position:absolute;left:40px;top:13px">  &nbsp CUSTOM RESUME</div> 
+            <a href="Contact.html" class="button"> Personalize</a>
         </header>
 
   <div id="main">
@@ -22,38 +21,29 @@
         <img src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg?w=740" alt="Image error" style="width:50px"> 
     </div>
     <h2>Personal Details</h2>
-    <script>
-        // extract query parameters from the URL
-        const params = new URLSearchParams(document.location.search);
-        const name = params.get("name");
-        const phone = params.get("phone");
-        const email= params.get("email");
-        const address = params.get("address");
-        const message = params.get("message");
-        
-        //display and check on console
-        console.log("name: "+name);
-        console.log("phone: "+phone);
-        console.log("name: "+email);
-        console.log("phone: "+address);
-        console.log("message: "+message);
-
+    <p><b>Name: </b><span id ="detailsn"></span></p>  
+    <p><b>Email: </b><span id ="detailse"></span></p>
+    <p><b>Address: </b><span id ="detailsa"></span></p>  
+    <p><b>Phone: </b><span id ="detailsp"></span></p>
+    <!-- <p><b>Message: </b><span id ="detailsm"></span></p> -->
+    
+    <script src="hscript.js">
     </script>
+          
+    <br/> <br/> <i><p style="font-family:Georgia, 'Times New Roman', Times, serif">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+         et dolore magna aliqua.</p></i> </p><p style="font-family:Georgia, 'Times New Roman', Times, serif"><i>ullamco laboris nisi ut aliquip ex ea commodo consequat."</i> </p>
+        <br/> <br/> <br/><h2>Academics</h2>
+        <ul id="formDataList"></ul>
+        <br/>
+    <br/><h2>Projects</h2>
+    <ul id="formDataListpr"></ul>
+    <br/>
     
-    <br/> <br/> <i><p style="font-family:Georgia, 'Times New Roman', Times, serif">"Skilled, hardworking individual with a strong sense of teamwork. Recent Graduate, eager to learn.
-        Experienced in the </p></i> </p><p style="font-family:Georgia, 'Times New Roman', Times, serif"><i>field through multiple university projects and personal endeavours."</i> </p>
-
-    <br/> <br/> <br/><h2>Academics</h2> <p><b>University:</b>  FAST NUCES LHR </p> <p><b>CGPA:</b> 3.22 </p> <p><b>Alevels:</b>  XAs XB </p> <p><b>OLevels:</b> XAs XBs </p> <b>Languages:</b> C++, C, C#<br/> <br/> <br/> <h2>Projects</h2>
-     <p ><b>OOP Project:</b>  Traffic Lights System (Visual Studio C++) </a></p>
-     <p ><b>OS Project:</b> Displayed output and working of OS Algorithms: RMS,EDS (VS C++, Libxl) </a></p>
-     <p ><b>COAL Project:</b> Red/Green Tile Game (Assembly Language, DOSBox) </a></p>
-     <p ><b>PF Project:</b>  1024 Game (VS C++) </a></p>
-    
-    <br/><br/><h2>Extracurriculars</h2> xxx <br/> ccc <br/> xxx<br/>
-  </div>
- <div style="height:1230px; width:100%">
-
-  </div>
+    <br/><br/><h2>Extracurriculars</h2>
+    <ul id="formDataListex"></ul>
+    <br/>
+    </div>
+    <div style="height:1200px"></div>
 </body>
 
 </html>
