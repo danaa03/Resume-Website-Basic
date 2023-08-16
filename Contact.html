@@ -1,85 +1,74 @@
 <!DOCTYPE html>
-
-
 <html>
-
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>  
     <link rel="stylesheet" href="cstyle.css">
     <link rel="icon" href="C:/Users/danaa/Downloads/user (1).png">
-
 </head>
 <body>
+    <header>
+        <div class="headerdiv">  &nbsp CUSTOM RESUME</div> 
+        <a href="index.html" class="button"> Home</a>   
+    </header>
 
-        <header>
-            <!--<img src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg?w=740" alt="Image error" style="width:50px">-->
-            <div style="font-size:20px;color:white;position:absolute;left:40px;top:13px">  &nbsp RESUME - FName LName </div> 
-            <a href="index.html" class="button"> Home</a>
-            
-        </header>
-
-  <div id="main">
-    <div>
-        <img src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg?w=740" alt="Image error" style="width:50px"> 
+    <div id="main">
+        <div>
+            <img src="https://img.freepik.com/premium-vector/anonymous-user-circle-icon-vector-illustration-flat-style-with-long-shadow_520826-1931.jpg?w=740" alt="Image error" style="width:50px"> 
+        </div>
         
+        <h2> Personalize your resume! </h2>
+        <form id="wholeForm" class="dynamicForm">
+            <div class="personal">
+                <p><br><h4>Enter Personal Details Here: </h4></p>
+                <div id="messageForm">
+                    <input type="text" id="name" name="name" placeholder="Enter name*" onblur="myFunc('name','spann')" required><span id="spann"></span>
+                    <input type="number" id="phone" name="phone" placeholder="Enter phone*"  onblur="myFunc('phone','spanp')" title="please enter a valid phone number (11 digits!)" required> <span id="spanp"></span>
+                    <input type="text" id="address" name="address" placeholder="Enter address*" onblur="myFunc('address','spana')" required> <span id="spana"></span>
+                    <input type="email" id="email" name="email" placeholder="Enter email*"  title = "please enter a valid email address." required> <span id="spane"></span>
+                </div>
+            </div>
+            <div class="academics">
+                <p><br><h4> Enter Academics' Info Here: </h4></p>
+                <div id="academicsForm" class="dynamicinputac">
+                    <div id = "inputF">
+                        <input type="text" id="fielda0" name="field0a" placeholder="field 0" onblur="myFunc('fielda0','spanac')" class="input-container">
+                        <span id="spanac"></span> 
+                    </div>
+                    <button type="button" class="submit" id="addac"><b>Add more</b></button>
+                </div>
+            </div>
+
+            <div class="projects">
+                <p><br><h4>Enter Projects' Info Here: </h4></p>
+                <div id="projectsForm" class="dynamicinputpr">
+                    <div id = "inputG">
+                        <input type="text" id="fieldp0" name="field0p" placeholder="field 0" onblur="myFunc('fieldp0','spanpr')" class="input-container">
+                        <span id="spanpr"></span> 
+                    </div>
+                    <button type="button" class="submit" id="addpr"><b>Add more</b></button>
+                </div>
+            </div>
+            
+            <div class="extra">
+                <p><br><h4>Enter Extracurriculars' Info Here: </h4></p>
+                    <div id="extracurricularsForm" class="dynamicinputex">
+                        <div id = "inputH">
+                            <input type="text" id="fielde0" name="field0e" placeholder="field 0" onblur="myFunc('fielde0','spanex')"  class="input-container">
+                            <span id="spanex"></span> 
+                        </div>
+                        <button type="button" class="submit" id="addex"><b>Add more</b></button>
+                    </div>
+            </div>
+
+            <button type="submit" class="submitw" id="submitwhole"><b>Submit</b></button>
+        
+        </form>
     </div>
     
-    <h2>Contact me here! </h2>
-    <form id="messageForm">
-        <input type="text" id="name" name="name" placeholder="Enter name" required>
-        <input type="tel" id="phone" name="phone" placeholder="Enter phone" required>
-        <input type="text" id="address" name="address" placeholder="Enter adress" required>
-        <input type="email" id="email" name="email" placeholder="Enter email" required>
-        <textarea id="message" name="message" placeholder="Your message" required></textarea>
-        <button type="submit" class="submit">Submit</button>
-      </form>
-
-  </div>
- <div style="height:900px;width:100%">
-
-  </div>
-  
-
-  <script>
-    //event listener added to messageForm. submission is an event. when it occurs this element is called.
-    document.getElementById("messageForm").addEventListener("submit", function (event) {
-      //prevent default action and implement own code
-      event.preventDefault();
-      //store values of inputs in variables
-      const name = document.getElementById("name").value;
-      const phone = document.getElementById("phone").value;
-      const address = document.getElementById("address").value;
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
-      
-      //display output on console
-      //console.log("Name: " + name);
-      //console.log("Phone: " + phone);
-      //console.log("Address: " + address);
-      //console.log("Email: " + email);
-      //console.log("Message: " + message);
-      
-      //message displayed to user after submission
-      alert("Your message has been received!");
-      
-      // Clear the form inputs after submission
-      document.getElementById("messageForm").reset();
-
-      // Encode the data as query parameters in the URL
-      const queryParams = new URLSearchParams({
-        name,
-        phone,
-        email,
-        address,
-        message
-      });
-
-      // Redirect to the index.html page with the data as query parameters
-      window.location.href = "index.html?" + queryParams.toString();
-    });
-  </script>
+    <div style="height:900px;width:100%"></div>
+    <script src="cscript.js">
+    </script>
 </body>
-
 </html>
